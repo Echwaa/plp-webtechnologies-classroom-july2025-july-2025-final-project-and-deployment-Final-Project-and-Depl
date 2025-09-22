@@ -1,0 +1,200 @@
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #007acc;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list a.active,
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #007acc;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Welcome section */
+.welcome {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Slider styling */
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 100%;
+  display: none;
+  border-radius: 8px;
+}
+
+.slider-image.active {
+  display: block;
+}
+
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(197, 204, 208, 0.8);
+  border: none;
+  color: rgb(17, 205, 61);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transform: translateY(-50%);
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+/* About and Contact */
+.about-content,
+.contact-form-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-section label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form-section button {
+  margin-top: 1.5rem;
+  background-color: #eaebec;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.contact-form-section button:hover {
+  background-color: #005fa3;
+}
+
+.form-message {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: green;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  #prevBtn,
+  #nextBtn {
+    padding: 0.25rem 0.5rem;
+  }
+}
+.products-services {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.product-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive NAV adjustment */
+@media (max-width: 600px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}
